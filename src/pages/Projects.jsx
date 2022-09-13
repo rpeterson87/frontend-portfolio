@@ -9,6 +9,7 @@ const Projects = (props) => {
         setProjects(data)
     }
     useEffect(() => getProjectsData(), [])
+    
 const loaded = () => {
     return projects.map((projects) => (
         <div>
