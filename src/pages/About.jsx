@@ -8,16 +8,16 @@ const About = (props) => {
     const getAboutData = async () => {
         // make api call and get response
     const response = await fetch(props.URL + "about");
-    
+   
     // turn response into javascript object
     const data = await response.json();
-
+    
     // set the about state to the data
     setAbout(data);
         
-    }
+}
+useEffect(() => getAboutData(), [])
 
-    useEffect(() => getAboutData(), [])
 const loaded = () => (
     <div>
         <h1>{about.name}</h1>
